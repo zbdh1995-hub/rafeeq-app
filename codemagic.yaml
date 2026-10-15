@@ -5,9 +5,12 @@ workflows:
     environment:
       flutter: stable
     scripts:
+      - name: Configure Gradle properties to handle SDK/metadata
+        script: |
+          echo "android.injected.testOnly=false" >> android/gradle.properties
       - name: Get packages
         script: flutter pub get
       - name: Build APK
-        script: flutter build apk --release
+        script: flutter build apk --release --no-pub
     artifacts:
       - build/app/outputs/flutter-apk/*.apk
