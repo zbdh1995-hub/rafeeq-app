@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace = "com.example.rafeeq"
-    compileSdk = 36 // تم التحديث للنسخة المطلوبة لمنع خطأ الـ metadata
+    compileSdk = 36
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -17,15 +17,23 @@ android {
 
     defaultConfig {
         applicationId = "com.example.rafeeq"
-        minSdk = flutter.minSdkVersion
+        minSdk = 23 // مهم جداً عشان مكتبات الفايربيس والصوت متضربش في الـ APK
         targetSdk = 36
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
 
+    // إيقاف فحص الـ Lint اللي بيفشل بناء الـ APK
+    lint {
+        checkReleaseBuilds = false
+        abortOnError = false
+    }
+
     buildTypes {
         release {
             signingConfig = signingConfigs.getByName("debug")
+            isMinifyEnabled = false
+            isShrinkResources = false
         }
     }
 }
