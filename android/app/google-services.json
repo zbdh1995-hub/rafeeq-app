@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "413182069273",
+    "project_id": "rafeeq-1f5e6",
+    "storage_bucket": "rafeeq-1f5e6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413182069273:android:9e8cb82e9d96ad651cb888",
+        "android_client_info": {
+          "package_name": "com.example.rafeeq"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBspjxS7fqVKOGnwf2vFUmokO2R4SClDh0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
